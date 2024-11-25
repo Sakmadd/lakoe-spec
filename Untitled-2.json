@@ -1,0 +1,159 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "version": "1.0",
+    "title": "LAKOE API SPECIFICATION",
+    "description": "ini adalah dokumentasi untuk spesifikasi API untuk aplikasi E-Commerce Lakoe",
+    "contact": { "name": "Ahmad Safii", "email": "ahmadsafii.work@gmail.com" }
+  },
+  "servers": [
+    {
+      "url": "http://{environtment}.lakoe.store/api/v1",
+      "description": "Lakoe RESTful API",
+      "variables": {
+        "environtment": {
+          "description": "Server Environtment",
+          "default": "dev",
+          "enum": ["dev", "prod"]
+        }
+      }
+    }
+  ],
+  "tags": [
+    {
+      "name": "Product Management"
+    },
+    {
+      "name": "Order Management"
+    },
+    {
+      "name": "Settings"
+    }
+  ],
+  "paths": {
+    "/product": {
+      "post": {
+        "tags": ["Product Management"],
+        "responses": {}
+      },
+      "get": {
+        "tags": ["Product Management"],
+        "responses": {}
+      },
+      "patch": {
+        "tags": ["Product Management"],
+        "responses": {}
+      }
+    },
+    "/product/delete/:id": {
+      "delete": {
+        "tags": ["Product Management"],
+        "responses": {}
+      }
+    },
+    "/product/detail": {
+      "get": {
+        "tags": ["Product Management"],
+        "responses": {}
+      }
+    },
+    "/product/toggle/status": {
+      "patch": {
+        "tags": ["Product Management"],
+        "responses": {}
+      }
+    },
+    "/product/search?keyword={productKeyword}": {
+      "get": {
+        "tags": ["Product Management"],
+        "responses": {}
+      }
+    },
+    "/product/category": {
+      "get": {
+        "tags": ["Product Management"],
+        "responses": {}
+      }
+    },
+    "/product/bulk/delete": {
+      "delete": {
+        "tags": ["Product Management"],
+        "responses": {}
+      }
+    },
+    "/product/bulk/activeToggle": {
+      "patch": {
+        "tags": ["Product Management"],
+        "responses": {}
+      }
+    },
+    "/cart": {
+      "get": {
+        "tags": ["Order Management"],
+        "responses": {}
+      }
+    },
+    "/cart/item": {
+      "post": {
+        "tags": ["Order Management"],
+        "responses": {}
+      },
+      "get": {
+        "tags": ["Order Management"],
+        "responses": {}
+      },
+      "patch": {
+        "tags": ["Order Management"],
+        "responses": {}
+      },
+      "delete": {
+        "tags": ["Order Management"],
+        "responses": {}
+      }
+    },
+    "/order": {
+      "get": {
+        "responses": {},
+        "tags": ["Order Management"]
+      },
+      "post": {
+        "responses": {},
+        "tags": ["Order Management"]
+      },
+      "patch": {
+        "responses": {},
+        "tags": ["Order Management"]
+      }
+    },
+    "/order/:id": {
+      "get": {
+        "tags": ["Order Management"],
+        "responses": {}
+      }
+    },
+    "/order/shipment": {
+      "get": {
+        "tags": ["Order Management"],
+        "responses": {}
+      }
+    },
+    "/order/payment": {
+      "post": {
+        "tags": ["Order Management"],
+        "responses": {}
+      }
+    },
+    "/order/status": {
+      "post": {
+        "tags": ["Order Management"],
+        "responses": {}
+      }
+    },
+    "/order/search?keyword={productKeyword}": {
+      "get": {
+        "tags": ["Order Management"],
+        "responses": {}
+      }
+    }
+  }
+}
